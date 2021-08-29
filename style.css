@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fix-width{
+    width: 1200px;
+    margin: auto;
+}
+.full-view{
+    background-color: #161826;
+    color: #fff;
+}
+.post-items{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.post ul li{
+    list-style: none;
+}
+.load{
+    width: 50%;
+    margin-right: 1%;
+    text-align: center;
+    position: fixed;
+    top: 30%;
+    left: 0%;
+    margin-left: 100px;
+}
+.post{
+    width: 50%;
+    margin-left: 1%;
+    text-align: center;
+}
+.post ul {
+    padding: 20px 0px;
+}
+.post ul li {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    margin: 10px 0;
+    background-color: palegoldenrod;
+    border-radius: 6px;
+}
+.post ul li:nth-child(even){
+    background-color: palegreen;
+}
+button{
+    display: block;
+    width: 100px;
+    height: 50px;
+    border: 1px solid palegreen;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: 600;
+    transition: .4s;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+}
+button::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: #31a4f1;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: .4s;
+    z-index: -1;
+    visibility: hidden;
+    /* opacity: 0; */
+}
+button:hover::after{
+    width: 100%;
+    visibility: visible;
+    /* opacity: 1; */
+}
+button:hover{
+    border: 1px solid transparent;
+    color: #fff;
+}
